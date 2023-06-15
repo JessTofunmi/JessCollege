@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{%static 'styles/myorder.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/cart.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h3 class="mb-0">Order View</h3>
+                        <a href="/myorder" class="btn float-end"> <i class="fa fa-reply"></i> Back</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Shipping Details</h4>
+                                <hr>
+                                <label class="mt-2">First Name</label>
+                                <div class="border p-1">{{ck.name}}</div>
+                                <label class="mt-2">Email</label>
+                                <div class="border p-1">{{ck.email}}</div>
+                                <label class="mt-2">Address</label>
+                                <div class="border p-1">
+                                    {{ck.address}},
+                                    {{ck.city}},
+                                    {{ck.state}}, "
+                                </div>
+                                <!-- <label>State</label>
+                                <div class="border p-1"></div> -->
+                                <label class="mt-2">zipcode</label>
+                                <div class="border p-1">{{ck.zipcode}}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Order Details</h4>
+                                <hr>
+                                <table class="table table-border">
+                                    <thead>
+                                        <tr>
+                                            <th>Course Name</th>
+                                            <th>Quantity</th>
+                                            <th>Price</th>
+                                            <th>Image</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in orditem %}
+                                        <tr>
+                                            <td>{{item.course.title}}</td>
+                                            <td>{{item.quantity}}</td>
+                                            <td>{{ item.price}}</td>
+                                            <td>
+                                                <img src="{{item.course.pic.url}}" height="50px" width="50px"  alt="Course Image"></td>
+                                            <!-- <td>
+                                                <a href="/orderview/{{item.tracking_no}}"  class="btn mb-1">View</a>
+                                            </td> -->
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <h4>
+                                    Grand Total : <span class="float-end">{{ck.total_price}}</span>
+                                </h4>
+                                <h6 class="border p-2">Paymode Mode : {{ck.payment_mode}}</h6>
+                                <h6 class="border p-2">Order Status : {{ck.status}}</h6>
+                                <h6 class="border p-2">Tracking No : {{ck.tracking_no}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

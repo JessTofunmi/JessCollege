@@ -1,0 +1,17 @@
+
+<img src="{{ user.profile.image.url }}" alt="">
+<h1>{{ user.username }}</h1>
+<h1>{{ user.email }}</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">Profile Info</legend>
+      {{ u_form }}
+      <!-- User form -->
+      {{ p_form}}
+      <!-- Profile form -->
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="submit">change</button>
+    </div>
+  </form>

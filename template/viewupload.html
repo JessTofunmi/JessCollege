@@ -1,0 +1,15 @@
+<form method="post">
+    {% for x in items %}
+    {{x.name}}
+
+     <img src="media/{{x.image}}">
+    <a href="/viewlargerpics/{{x.id}}">View Image</a>
+    {{ form.as_p}}
+    {% endfor %}
+</form>
+
+
+<div class="tutor-card-footer">
+	<div class=" tutor-d-flex tutor-align-center tutor-justify-between "><div class="list-item-price tutor-d-flex tutor-align-center"> <span class="price tutor-fs-6 tutor-fw-bold tutor-color-black"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">₦</span>15,000.00</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">₦</span>3,750.00</bdi></span></ins> </span></div><div class="list-item-button"> 
+	<a href="?add-to-cart=57583" data-quantity="1" class="tutor-btn tutor-btn-outline-primary tutor-btn-md tutor-btn-block  product_type_simple add_to_cart_button  tutor-open-login-modal" data-product_id="57583" data-product_sku="" aria-label="Add &ldquo;HTML, CSS, and Javascript for Web Developers&rdquo; to your cart" rel="nofollow"><span class="tutor-icon-cart-line tutor-mr-8"></span><span class="cart-text">Add to cart</span></a> </div></div></div>
+</div>
