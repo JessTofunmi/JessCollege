@@ -1,0 +1,161 @@
+/*================================================================================
+	Item Name: Premier
+	Description: Premier Website 
+	Author: Adekeye Adewole ismail
+	Author URL: http://todayssolutions.com.ng
+================================================================================*/
+
+/* =================================================================================
+smaller than 1280 
+================================================================================= */
+@media screen and (max-width: 1280px) {
+	.topmenu{display: none;}
+}
+
+/* =================================================================================
+smaller than 1024 
+================================================================================= */
+@media screen and (max-width: 1024px) {
+	
+	/*.profilebox b{display: none;}
+	.searchform{display: none;}
+	.sidebar{display: none;}
+	.content{margin-left: 0 !important;}
+	//.sidebar-open-button{display: none;}
+	//.sidebar-open-button-mobile{display: block;}
+	.social-stats{bottom: 100px;}
+	.topstats li{width: 33%;}
+	.demo-sidebarmenu .sidebar{display: block;}
+	*/
+}
+
+/* =================================================================================
+greather than 980
+================================================================================= */
+@media screen and (min-width: 980px) {
+	
+	/*.profilebox b{display: none;}
+	.searchform{display: none;}
+	.sidebar{display: none;}
+	.content{margin-left: 0 !important;}
+	//.sidebar-open-button{display: none;}
+	//.sidebar-open-button-mobile{display: block;}
+	.social-stats{bottom: 100px;}
+	.topstats li{width: 33%;}
+	.demo-sidebarmenu .sidebar{display: block;}
+	*/
+	.container-left
+	{
+		display:block !important;
+	}
+}
+
+/* =================================================================================
+smaller than 760 
+================================================================================= */
+@media screen and (max-width: 768px) {
+	header
+	{
+		display:block;
+	}
+	.toolbox
+	{
+		width:20%;
+	}
+	
+	#head
+	{
+		display:none;
+	}
+	
+	.container-left
+	{
+		display:none;
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:35%;		
+	}
+	
+	.container-right
+	{
+		width:100%;
+	}
+	
+	.bar .float-left
+	{
+		display:none;
+	}
+	
+	#pro-holder
+	{
+		float:left;
+	}
+	
+	.form-ui-panel .pane label
+	{
+		font-size:0.8em;
+		width:30%;		
+	}
+	
+	.form-ui-container .form-ui-panel input[type="text"]
+	{
+		width:51%;		
+	}
+	
+	.form-ui-panel .pane textarea
+	{
+		width:50% !important;
+	}
+}
+
+/* =================================================================================
+smaller than 428 
+================================================================================= */
+@media screen and (max-width: 428px) {
+	
+	.mini-container
+	{
+		width:90%;
+	}
+	
+	table.grid td,table.grid th
+	{
+		font-size:0.9em;
+	}
+	
+	.res_link
+	{
+		float:left;
+		margin-top:5px;
+		margin-left:5px;
+	}
+	
+	.toolbox
+	{
+		width:28%;
+	}
+	
+	.container-left
+	{
+		display:none;
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:70%;		
+	}
+	/*.top-right{display: none;}
+	.applogo{
+		padding-left: 0;
+		background: none;
+		display: block;
+		position: absolute;
+		width: 100%;
+		z-index: -4;
+	}
+	.topstats li{width: 100%;}
+	*/
+}
+
+
+
